@@ -167,9 +167,12 @@
         flex-wrap: wrap;
         gap: 0.25em 0.75em;
         padding: 0.35em 0.6em;
-        font-size: 0.95em;
+        font-size: 0.85em;
+        line-height: 1.2;
+        background-color: var(--epcc-surface-solid);
         z-index: 6;
         box-sizing: border-box;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     .points > div{
@@ -181,7 +184,21 @@
 
 @media (max-width: 380px) {
     :root {
-        --epcc-mobile-topbar: 7em;
+        --epcc-mobile-topbar: 4.75em;
         --epcc-mobile-bottombar: 7.5em;
+    }
+
+    .points {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 0.5em;
+        font-size: 0.75em;
+        padding: 0.4em 0.6em;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .points > div {
+        flex-shrink: 0;
     }
 }
